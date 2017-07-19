@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.youngmodulus.www.hotspot_chat.MainActivity">
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/create_server_layout"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/create_server_text"
+            android:text="Create Server"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/server_name"
+            android:layout_below="@id/create_server_text"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:hint="Server Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/create_server_button"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="create"
+            android:layout_below="@id/server_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/client_layout"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/connected_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:text="Client connected to:"/>
+        <TextView
+            android:id="@+id/serverip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="ipaddress of server"
+            android:layout_below="@id/connected_client"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:id="@+id/message_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Message"
+            android:layout_below="@+id/serverip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"/>
+        <Button
+            android:id="@+id/send_button"
+            android:text="SEND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_client"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"/>
+        <Button
+            android:id="@+id/disconnect_client"
+            android:text="Disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_below="@id/send_button"/>
+        <TextView
+            android:id="@+id/chat_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHAT LOG:\n"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_below="@+id/disconnect_client"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:id="@+id/server_layout"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/client_info"
+            android:text="Chat with Clients"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/server_send_text"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_below="@id/client_info"
+            android:hint="Message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/server_send_button"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:text="Send"
+            android:layout_below="@id/server_send_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/server_chat_log"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_below="@id/server_send_button"
+            android:text="CHAT LOG:"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.youngmodulus.www.hotspot_chat.MainActivity"
+        android:id="@+id/join_layout"
+        android:visibility="gone">
+    <TextView
+        android:id="@+id/join_server"
+        android:text="Join Server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"/>
+    <EditText
+        android:id="@+id/uname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/join_server"
+        android:hint="Username"/>
+    <Button
+        android:id="@+id/join_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/uname"
+        android:text="Join"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
